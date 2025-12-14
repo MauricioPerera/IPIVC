@@ -158,6 +158,71 @@
                 </div>
             </div>
         </div>
+        </div>
+    </section>
+
+    <section id="implementation-guide" style="background-color: white;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">Guía de Implementación Detallada</h2>
+            
+            <div class="code-block" style="background: white; border: 1px solid #e2e8f0; color: var(--text); padding: 0;">
+                <div style="background: var(--code-bg); color: white; padding: 1rem 2rem; border-radius: 1rem 1rem 0 0;">
+                    <h3 style="margin: 0; color: white;">Paso 1: Inicio de Tarea (Responsabilidad Humana)</h3>
+                </div>
+                <div style="padding: 2rem;">
+                    <p style="margin-bottom: 1rem;"><strong>1. Verifica el Terreno:</strong></p>
+                    <pre style="background: #f1f5f9; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;"><code>$ python tools/session_manager.py
+> Opción [1] Ver Estado del Equipo</code></pre>
+                    <p>El sistema hará un <code>git pull</code> automático. Si ves que alguien está tocando el módulo que necesitas, <strong>DETENTE</strong> y habla con ese humano.</p>
+                    
+                    <p style="margin-top: 2rem; margin-bottom: 1rem;"><strong>2. Reserva y Especifica:</strong></p>
+                    <pre style="background: #f1f5f9; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;"><code>$ python tools/session_manager.py
+> Opción [2] Iniciar Sesión</code></pre>
+                    <p>Crea tu sesión (ej. <code>@usuario - Feature X</code>). <span class="highlight">CRÍTICO:</span> Edita el archivo generado y completa las <strong>Especificaciones Funcionales</strong> antes de continuar.</p>
+                </div>
+            </div>
+
+            <div class="code-block" style="background: white; border: 1px solid #e2e8f0; color: var(--text); padding: 0; margin-top: 3rem;">
+                <div style="background: var(--code-bg); color: white; padding: 1rem 2rem; border-radius: 1rem 1rem 0 0;">
+                    <h3 style="margin: 0; color: white;">Paso 2: Orquestación de IAs (La Magia)</h3>
+                </div>
+                <div style="padding: 2rem;">
+                    <p>Ahora que tienes el "bloqueo", puedes liberar a tus agentes.</p>
+                    <ol style="margin-left: 1.5rem; margin-top: 1rem; space-y: 1rem;">
+                        <li style="margin-bottom: 0.5rem;">Ejecuta <code>python tools/context_generator.py</code> para crear el prompt maestro.</li>
+                        <li style="margin-bottom: 0.5rem;">Copia el contenido de <code>CURRENT_CONTEXT.prompt.md</code>.</li>
+                        <li style="margin-bottom: 0.5rem;">Pégalo en tu chat con la IA (ChatGPT, Claude, Trae, Cursor).</li>
+                        <li><strong>Tip Pro:</strong> Pega también <code>AGENTS.md</code> si tu IA no tiene acceso al sistema de archivos.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="code-block" style="background: white; border: 1px solid #e2e8f0; color: var(--text); padding: 0; margin-top: 3rem;">
+                <div style="background: var(--code-bg); color: white; padding: 1rem 2rem; border-radius: 1rem 1rem 0 0;">
+                    <h3 style="margin: 0; color: white;">Paso 3: Verificación y Cierre (El Filtro)</h3>
+                </div>
+                <div style="padding: 2rem;">
+                    <p>Tu IA ha generado código. ¿Es seguro? ¿Cumple las specs?</p>
+                    <pre style="background: #f1f5f9; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;"><code>$ python tools/verify_task.py</code></pre>
+                    <p>Este script generará un reporte <code>AI_FEEDBACK_REPORT.md</code>.</p>
+                    <ul style="margin-left: 1.5rem; margin-top: 1rem;">
+                        <li>❌ <strong>Si falla:</strong> Entrégale el reporte a la IA para que corrija.</li>
+                        <li>✅ <strong>Si pasa:</strong> Libera el bloqueo (Opción 3 en Session Manager) y haz push.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top: 4rem; padding: 2rem; background: #fff1f2; border-left: 5px solid #e11d48; border-radius: 0.5rem;">
+                <h3 style="color: #e11d48; margin-bottom: 1rem;">🚨 Gestión de Conflictos</h3>
+                <p>Si necesitas tocar un archivo que ya está reservado por otro humano:</p>
+                <ol style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                    <li><strong>NO</strong> le pidas a tu IA que lo sobrescriba.</li>
+                    <li>Contacta al humano dueño de la sesión (su usuario está en el archivo de bloqueo).</li>
+                    <li>Acuerden quién hace qué o esperen a que termine.</li>
+                </ol>
+            </div>
+
+        </div>
     </section>
 
     <section id="features">
