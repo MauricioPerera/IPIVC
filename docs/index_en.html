@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibecoding IPIVC Standard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="lang-switch" style="position: absolute; top: 1rem; right: 2rem; z-index: 10;">
+            <a href="index.html" style="color: white; text-decoration: none; font-weight: bold; margin-right: 1rem; opacity: 0.6;">ES</a>
+            <a href="index_en.html" style="color: white; text-decoration: none; font-weight: bold; margin-right: 1rem; opacity: 1; border-bottom: 2px solid var(--secondary);">EN</a>
+            <a href="index_pt.html" style="color: white; text-decoration: none; font-weight: bold; opacity: 0.6;">PT</a>
+        </div>
+        <div class="container">
+            <h1>Vibecoding IPIVC</h1>
+            <p class="tagline">The coordination standard for AI-assisted human teams.</p>
+            <div class="cta-group">
+                <a href="https://github.com/MauricioPerera/IPIVC/releases" class="btn">Download v2.0 ZIP</a>
+                <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="problem">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">The "Chaotic Swarm" Problem</h2>
+            <div class="grid">
+                <div class="card">
+                    <span class="card-icon">🌪️</span>
+                    <h3>Invisible Collisions</h3>
+                    <p>5 developers using 5 different AIs (ChatGPT, Trae, Cursor) touching the same files at the same time without knowing it.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🧠</span>
+                    <h3>Context Amnesia</h3>
+                    <p>Your AI doesn't know what your teammate's AI decided 5 minutes ago. Result: Incompatible code and immediate technical debt.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">💥</span>
+                    <h3>Merge Hell</h3>
+                    <p>When everyone pushes auto-generated code, resolving conflicts becomes an impossible human task.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" style="background-color: white;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 2rem;">The Solution: IPIVC Protocol</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem auto;">
+                A lightweight system that lives inside your Git repository and acts as a traffic light for your distributed team.
+            </p>
+
+            <div class="code-block">
+                <p style="color: #94a3b8; margin-bottom: 1rem;"># 1. Install the standard in your existing project</p>
+                <p>$ python install_standard.py</p>
+                <br>
+                <p style="color: #94a3b8; margin-bottom: 1rem;"># 2. Before coding, coordinate with your team</p>
+                <p>$ python tools/session_manager.py</p>
+                <p>> [1] Check Team Status (Sync)</p>
+                <p>> [2] Lock Files (Lock)</p>
+                <br>
+                <p style="color: #94a3b8; margin-bottom: 1rem;"># 3. When finished, verify and release</p>
+                <p>$ python tools/session_manager.py</p>
+                <p>> [3] End Session (Unlock)</p>
+            </div>
+
+            <div class="grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h3>Investigate & Plan</h3>
+                        <p>Sync with the team and reserve your work zone (Lock). The system notifies the rest via Git/LokiVector.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h3>Implement</h3>
+                        <p>Feed your AI with <code>CURRENT_CONTEXT.prompt.md</code>. The AI generates code respecting the boundaries.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h3>Verify & Correct</h3>
+                        <p>You review the code using <code>verify_task.py</code>. If it passes tests, release the lock (Unlock) and push.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ipivc-protocol" style="background-color: var(--light);">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">The I.P.I.V.C. Protocol</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto; font-size: 1.2rem;">
+                A strict lifecycle to ensure that AI speed doesn't compromise project stability.
+            </p>
+            
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                <div class="card" style="border-top-color: #3b82f6;">
+                    <span style="font-size: 3rem; font-weight: 800; color: #3b82f6; display: block; margin-bottom: 0.5rem;">I</span>
+                    <h3>Investigate</h3>
+                    <p>Before touching a line of code, the human syncs the team state. Who is touching what? What architecture must I respect?</p>
+                </div>
+                <div class="card" style="border-top-color: #8b5cf6;">
+                    <span style="font-size: 3rem; font-weight: 800; color: #8b5cf6; display: block; margin-bottom: 0.5rem;">P</span>
+                    <h3>Plan</h3>
+                    <p>The human defines the scope and <strong>LOCKS</strong> the necessary files. The intention is announced to the team remotely.</p>
+                </div>
+                <div class="card" style="border-top-color: #ec4899;">
+                    <span style="font-size: 3rem; font-weight: 800; color: #ec4899; display: block; margin-bottom: 0.5rem;">I</span>
+                    <h3>Implement</h3>
+                    <p>AI enters the game. The human feeds the agent with context and supervises code generation within safe limits.</p>
+                </div>
+                <div class="card" style="border-top-color: #f59e0b;">
+                    <span style="font-size: 3rem; font-weight: 800; color: #f59e0b; display: block; margin-bottom: 0.5rem;">V</span>
+                    <h3>Verify</h3>
+                    <p>The human acts as "Gatekeeper". Runs tests, linters, and checks that the AI hasn't hallucinated dependencies or touched forbidden files.</p>
+                </div>
+                <div class="card" style="border-top-color: #10b981;">
+                    <span style="font-size: 3rem; font-weight: 800; color: #10b981; display: block; margin-bottom: 0.5rem;">C</span>
+                    <h3>Correct</h3>
+                    <p>If verification fails, the human iterates with the AI. Only when everything is green, the lock is released and the final push is made.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="human-role" style="background-color: var(--dark); color: white;">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 2rem; background: linear-gradient(to right, #4ade80, #3b82f6); -webkit-background-clip: text; background-clip: text; color: transparent;">The Human: Orchestra Conductor</h2>
+                <p style="font-size: 1.25rem; margin-bottom: 2rem; color: #cbd5e1;">
+                    In the IPIVC standard, AI is not a replacement, it's an instrument. The human is the only entity with <strong>responsibility and authority</strong>.
+                </p>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; text-align: left; margin-top: 3rem;">
+                    <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 1rem; border: 1px solid rgba(255,255,255,0.1);">
+                        <h3 style="color: #4ade80; margin-bottom: 1rem;">✅ Your Responsibility</h3>
+                        <ul style="list-style: none; space-y: 1rem;">
+                            <li style="margin-bottom: 1rem;">• <strong>Sync</strong> team state before starting.</li>
+                            <li style="margin-bottom: 1rem;">• <strong>Lock</strong> explicitly the resources you will use.</li>
+                            <li style="margin-bottom: 1rem;">• <strong>Filter</strong> the code your AI produces.</li>
+                            <li>• <strong>Release</strong> locks upon finishing.</li>
+                        </ul>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 1rem; border: 1px solid rgba(255,255,255,0.1);">
+                        <h3 style="color: #f87171; margin-bottom: 1rem;">❌ Forbidden</h3>
+                        <ul style="list-style: none;">
+                            <li style="margin-bottom: 1rem;">• Letting AI commit directly to <code>main</code>.</li>
+                            <li style="margin-bottom: 1rem;">• Ignoring lock alerts from other colleagues.</li>
+                            <li style="margin-bottom: 1rem;">• Copy-pasting code without reading it (Blind Trust).</li>
+                            <li>• Assuming "the AI knows what it's doing".</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="implementation-guide" style="background-color: white;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">Detailed Implementation Guide</h2>
+            
+            <div class="code-block" style="background: white; border: 1px solid #e2e8f0; color: var(--text); padding: 0;">
+                <div style="background: var(--code-bg); color: white; padding: 1rem 2rem; border-radius: 1rem 1rem 0 0;">
+                    <h3 style="margin: 0; color: white;">Step 1: Task Start (Human Responsibility)</h3>
+                </div>
+                <div style="padding: 2rem;">
+                    <p style="margin-bottom: 1rem;"><strong>1. Check the Terrain:</strong></p>
+                    <pre style="background: #f1f5f9; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;"><code>$ python tools/session_manager.py
+> Option [1] Check Team Status</code></pre>
+                    <p>The system will auto-sync via Git/LokiVector. If you see someone touching the module you need, <strong>STOP</strong> and talk to that human.</p>
+                    
+                    <p style="margin-top: 2rem; margin-bottom: 1rem;"><strong>2. Reserve and Specify:</strong></p>
+                    <pre style="background: #f1f5f9; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;"><code>$ python tools/session_manager.py
+> Option [2] Start Session</code></pre>
+                    <p>Create your session (e.g., <code>@user - Feature X</code>). <span class="highlight">CRITICAL:</span> Edit the generated file and complete the <strong>Functional Specifications</strong> before continuing.</p>
+                </div>
+            </div>
+
+            <div class="code-block" style="background: white; border: 1px solid #e2e8f0; color: var(--text); padding: 0; margin-top: 3rem;">
+                <div style="background: var(--code-bg); color: white; padding: 1rem 2rem; border-radius: 1rem 1rem 0 0;">
+                    <h3 style="margin: 0; color: white;">Step 2: AI Orchestration (The Magic)</h3>
+                </div>
+                <div style="padding: 2rem;">
+                    <p>Now that you have the "lock", you can unleash your agents.</p>
+                    <ol style="margin-left: 1.5rem; margin-top: 1rem; space-y: 1rem;">
+                        <li style="margin-bottom: 0.5rem;">Run <code>python tools/context_generator.py</code> to create the master prompt.</li>
+                        <li style="margin-bottom: 0.5rem;">Copy the content of <code>CURRENT_CONTEXT.prompt.md</code>.</li>
+                        <li style="margin-bottom: 0.5rem;">Paste it into your AI chat (ChatGPT, Claude, Trae, Cursor).</li>
+                        <li><strong>Pro Tip:</strong> Also paste <code>AGENTS.md</code> if your AI lacks file system access.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="code-block" style="background: white; border: 1px solid #e2e8f0; color: var(--text); padding: 0; margin-top: 3rem;">
+                <div style="background: var(--code-bg); color: white; padding: 1rem 2rem; border-radius: 1rem 1rem 0 0;">
+                    <h3 style="margin: 0; color: white;">Step 3: Verification & Closure (The Filter)</h3>
+                </div>
+                <div style="padding: 2rem;">
+                    <p>Your AI has generated code. Is it safe? Does it meet specs?</p>
+                    <pre style="background: #f1f5f9; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;"><code>$ python tools/verify_task.py</code></pre>
+                    <p>This script will generate an <code>AI_FEEDBACK_REPORT.md</code>.</p>
+                    <ul style="margin-left: 1.5rem; margin-top: 1rem;">
+                        <li>❌ <strong>If it fails:</strong> Give the report to the AI to correct.</li>
+                        <li>✅ <strong>If it passes:</strong> Release the lock (Option 3 in Session Manager) and push.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top: 4rem; padding: 2rem; background: #fff1f2; border-left: 5px solid #e11d48; border-radius: 0.5rem;">
+                <h3 style="color: #e11d48; margin-bottom: 1rem;">🚨 Conflict Management</h3>
+                <p>If you need to touch a file already reserved by another human:</p>
+                <ol style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                    <li><strong>DO NOT</strong> ask your AI to overwrite it.</li>
+                    <li>Contact the human owner of the session (their user is in the lock file).</li>
+                    <li>Agree on who does what or wait for them to finish.</li>
+                </ol>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Key Features</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>🤖 AI-Agnostic</h3>
+                    <p>Works with ChatGPT, Claude, Trae, Cursor, Copilot, or any future tool. Control remains with the human.</p>
+                </div>
+                <div class="card">
+                    <h3>🔒 Hybrid Locking</h3>
+                    <p>Uses Git for persistence and LokiVector for real-time semantic conflict detection.</p>
+                </div>
+                <div class="card">
+                    <h3>📄 AGENTS.md Standard</h3>
+                    <p>Implements the open standard for machine-readable documentation. Your agents will know how to behave.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Vibecoding IPIVC Standard v2.0 (Human-Centric Edition)</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">Open Source License - MIT</p>
+        </div>
+    </footer>
+
+</body>
+</html>

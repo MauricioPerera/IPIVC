@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibecoding IPIVC Standard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="lang-switch" style="position: absolute; top: 1rem; right: 2rem; z-index: 10;">
+            <a href="index.html" style="color: white; text-decoration: none; font-weight: bold; margin-right: 1rem; opacity: 0.6;">ES</a>
+            <a href="index_en.html" style="color: white; text-decoration: none; font-weight: bold; margin-right: 1rem; opacity: 0.6;">EN</a>
+            <a href="index_pt.html" style="color: white; text-decoration: none; font-weight: bold; opacity: 1; border-bottom: 2px solid var(--secondary);">PT</a>
+        </div>
+        <div class="container">
+            <h1>Vibecoding IPIVC</h1>
+            <p class="tagline">O padrão de coordenação para equipes humanas assistidas por IA.</p>
+            <div class="cta-group">
+                <a href="https://github.com/MauricioPerera/IPIVC/releases" class="btn">Baixar v2.0 ZIP</a>
+                <a href="#how-it-works" class="btn btn-secondary">Ver Como Funciona</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="problem">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">O Problema do "Enxame Caótico"</h2>
+            <div class="grid">
+                <div class="card">
+                    <span class="card-icon">🌪️</span>
+                    <h3>Colisões Invisíveis</h3>
+                    <p>5 desenvolvedores usando 5 IAs diferentes (ChatGPT, Trae, Cursor) tocando os mesmos arquivos ao mesmo tempo sem saber.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🧠</span>
+                    <h3>Amnésia de Contexto</h3>
+                    <p>Sua IA não sabe o que a IA do seu colega decidiu há 5 minutos. Resultado: Código incompatível e dívida técnica imediata.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">💥</span>
+                    <h3>Inferno de Merges</h3>
+                    <p>Quando todos fazem push de código gerado automaticamente, resolver conflitos torna-se uma tarefa humana impossível.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" style="background-color: white;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 2rem;">A Solução: Protocolo IPIVC</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem auto;">
+                Um sistema leve que vive dentro do seu repositório Git e atua como um semáforo de tráfego para sua equipe distribuída.
+            </p>
+
+            <div class="code-block">
+                <p style="color: #94a3b8; margin-bottom: 1rem;"># 1. Instale o padrão em seu projeto existente</p>
+                <p>$ python install_standard.py</p>
+                <br>
+                <p style="color: #94a3b8; margin-bottom: 1rem;"># 2. Antes de codar, coordene com sua equipe</p>
+                <p>$ python tools/session_manager.py</p>
+                <p>> [1] Ver Status da Equipe (Sync)</p>
+                <p>> [2] Bloquear Arquivos (Lock)</p>
+                <br>
+                <p style="color: #94a3b8; margin-bottom: 1rem;"># 3. Ao terminar, verifique e libere</p>
+                <p>$ python tools/session_manager.py</p>
+                <p>> [3] Encerrar Sessão (Unlock)</p>
+            </div>
+
+            <div class="grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h3>Investigar & Planejar</h3>
+                        <p>Sincronize com a equipe e reserve sua zona de trabalho (Lock). O sistema avisa o resto via Git/LokiVector.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h3>Implementar</h3>
+                        <p>Alimente sua IA com <code>CURRENT_CONTEXT.prompt.md</code>. A IA gera código respeitando os limites.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h3>Verificar & Corrigir</h3>
+                        <p>Você revisa o código usando <code>verify_task.py</code>. Se passar nos testes, libere o bloqueio (Unlock) e faça push.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ipivc-protocol" style="background-color: var(--light);">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">O Protocolo I.P.I.V.C.</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto; font-size: 1.2rem;">
+                Um ciclo de vida estrito para garantir que a velocidade da IA não comprometa a estabilidade do projeto.
+            </p>
+            
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                <div class="card" style="border-top-color: #3b82f6;">
+                    <span style="font-size: 3rem; font-weight: 800; color: #3b82f6; display: block; margin-bottom: 0.5rem;">I</span>
+                    <h3>Investigar</h3>
+                    <p>Antes de tocar em uma linha de código, o humano sincroniza o estado da equipe. Quem está tocando o quê? Qual arquitetura devo respeitar?</p>
+                </div>
+                <div class="card" style="border-top-color: #8b5cf6;">
+                    <span style="font-size: 3rem; font-weight: 800; color: #8b5cf6; display: block; margin-bottom: 0.5rem;">P</span>
+                    <h3>Planejar</h3>
+                    <p>O humano define o escopo e <strong>BLOQUEIA</strong> os arquivos necessários. A intenção é anunciada à equipe remotamente.</p>
+                </div>
+                <div class="card" style="border-top-color: #ec4899;">
+                    <span style="font-size: 3rem; font-weight: 800; color: #ec4899; display: block; margin-bottom: 0.5rem;">I</span>
+                    <h3>Implementar</h3>
+                    <p>A IA entra em jogo. O humano alimenta o agente com contexto e supervisiona a geração de código dentro dos limites seguros.</p>
+                </div>
+                <div class="card" style="border-top-color: #f59e0b;">
+                    <span style="font-size: 3rem; font-weight: 800; color: #f59e0b; display: block; margin-bottom: 0.5rem;">V</span>
+                    <h3>Verificar</h3>
+                    <p>O humano atua como "Gatekeeper". Executa testes, linters e verifica se a IA não alucinou dependências ou tocou arquivos proibidos.</p>
+                </div>
+                <div class="card" style="border-top-color: #10b981;">
+                    <span style="font-size: 3rem; font-weight: 800; color: #10b981; display: block; margin-bottom: 0.5rem;">C</span>
+                    <h3>Corrigir</h3>
+                    <p>Se a verificação falhar, o humano itera com a IA. Somente quando tudo estiver verde, o bloqueio é liberado e o push final é feito.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="human-role" style="background-color: var(--dark); color: white;">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 2rem; background: linear-gradient(to right, #4ade80, #3b82f6); -webkit-background-clip: text; background-clip: text; color: transparent;">O Humano: Maestro da Orquestra</h2>
+                <p style="font-size: 1.25rem; margin-bottom: 2rem; color: #cbd5e1;">
+                    No padrão IPIVC, a IA não é um substituto, é um instrumento. O humano é a única entidade com <strong>responsabilidade e autoridade</strong>.
+                </p>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; text-align: left; margin-top: 3rem;">
+                    <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 1rem; border: 1px solid rgba(255,255,255,0.1);">
+                        <h3 style="color: #4ade80; margin-bottom: 1rem;">✅ Sua Responsabilidade</h3>
+                        <ul style="list-style: none; space-y: 1rem;">
+                            <li style="margin-bottom: 1rem;">• <strong>Sincronizar</strong> o estado da equipe antes de começar.</li>
+                            <li style="margin-bottom: 1rem;">• <strong>Bloquear</strong> explicitamente os recursos que você usará.</li>
+                            <li style="margin-bottom: 1rem;">• <strong>Filtrar</strong> o código que sua IA produz.</li>
+                            <li>• <strong>Liberar</strong> bloqueios ao terminar.</li>
+                        </ul>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 1rem; border: 1px solid rgba(255,255,255,0.1);">
+                        <h3 style="color: #f87171; margin-bottom: 1rem;">❌ Proibido</h3>
+                        <ul style="list-style: none;">
+                            <li style="margin-bottom: 1rem;">• Deixar a IA fazer commit direto na <code>main</code>.</li>
+                            <li style="margin-bottom: 1rem;">• Ignorar alertas de bloqueio de outros colegas.</li>
+                            <li style="margin-bottom: 1rem;">• Copiar e colar código sem ler (Confiança Cega).</li>
+                            <li>• Assumir que "a IA sabe o que está fazendo".</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="implementation-guide" style="background-color: white;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">Guia de Implementação Detalhado</h2>
+            
+            <div class="code-block" style="background: white; border: 1px solid #e2e8f0; color: var(--text); padding: 0;">
+                <div style="background: var(--code-bg); color: white; padding: 1rem 2rem; border-radius: 1rem 1rem 0 0;">
+                    <h3 style="margin: 0; color: white;">Passo 1: Início da Tarefa (Responsabilidade Humana)</h3>
+                </div>
+                <div style="padding: 2rem;">
+                    <p style="margin-bottom: 1rem;"><strong>1. Verifique o Terreno:</strong></p>
+                    <pre style="background: #f1f5f9; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;"><code>$ python tools/session_manager.py
+> Opção [1] Ver Status da Equipe</code></pre>
+                    <p>O sistema fará um <code>git pull</code> automático. Se você vir alguém tocando o módulo que precisa, <strong>PARE</strong> e fale com esse humano.</p>
+                    
+                    <p style="margin-top: 2rem; margin-bottom: 1rem;"><strong>2. Reserve e Especifique:</strong></p>
+                    <pre style="background: #f1f5f9; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;"><code>$ python tools/session_manager.py
+> Opção [2] Iniciar Sessão</code></pre>
+                    <p>Crie sua sessão (ex: <code>@usuario - Feature X</code>). <span class="highlight">CRÍTICO:</span> Edite o arquivo gerado e complete as <strong>Especificações Funcionais</strong> antes de continuar.</p>
+                </div>
+            </div>
+
+            <div class="code-block" style="background: white; border: 1px solid #e2e8f0; color: var(--text); padding: 0; margin-top: 3rem;">
+                <div style="background: var(--code-bg); color: white; padding: 1rem 2rem; border-radius: 1rem 1rem 0 0;">
+                    <h3 style="margin: 0; color: white;">Passo 2: Orquestração de IAs (A Mágica)</h3>
+                </div>
+                <div style="padding: 2rem;">
+                    <p>Agora que você tem o "bloqueio", pode liberar seus agentes.</p>
+                    <ol style="margin-left: 1.5rem; margin-top: 1rem; space-y: 1rem;">
+                        <li style="margin-bottom: 0.5rem;">Execute <code>python tools/context_generator.py</code> para criar o prompt mestre.</li>
+                        <li style="margin-bottom: 0.5rem;">Copie o conteúdo de <code>CURRENT_CONTEXT.prompt.md</code>.</li>
+                        <li style="margin-bottom: 0.5rem;">Cole no chat da sua IA (ChatGPT, Claude, Trae, Cursor).</li>
+                        <li><strong>Dica Pro:</strong> Cole também <code>AGENTS.md</code> se sua IA não tiver acesso ao sistema de arquivos.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="code-block" style="background: white; border: 1px solid #e2e8f0; color: var(--text); padding: 0; margin-top: 3rem;">
+                <div style="background: var(--code-bg); color: white; padding: 1rem 2rem; border-radius: 1rem 1rem 0 0;">
+                    <h3 style="margin: 0; color: white;">Passo 3: Verificação e Encerramento (O Filtro)</h3>
+                </div>
+                <div style="padding: 2rem;">
+                    <p>Sua IA gerou código. É seguro? Atende às specs?</p>
+                    <pre style="background: #f1f5f9; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;"><code>$ python tools/verify_task.py</code></pre>
+                    <p>Este script gerará um relatório <code>AI_FEEDBACK_REPORT.md</code>.</p>
+                    <ul style="margin-left: 1.5rem; margin-top: 1rem;">
+                        <li>❌ <strong>Se falhar:</strong> Entregue o relatório à IA para corrigir.</li>
+                        <li>✅ <strong>Se passar:</strong> Libere o bloqueio (Opção 3 no Session Manager) e faça push.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top: 4rem; padding: 2rem; background: #fff1f2; border-left: 5px solid #e11d48; border-radius: 0.5rem;">
+                <h3 style="color: #e11d48; margin-bottom: 1rem;">🚨 Gestão de Conflitos</h3>
+                <p>Se você precisar tocar em um arquivo já reservado por outro humano:</p>
+                <ol style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                    <li><strong>NÃO</strong> peça à sua IA para sobrescrevê-lo.</li>
+                    <li>Contate o humano dono da sessão (o usuário está no arquivo de bloqueio).</li>
+                    <li>Entrem em acordo sobre quem faz o quê ou aguarde o término.</li>
+                </ol>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Principais Características</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>🤖 Agnóstico à IA</h3>
+                    <p>Funciona com ChatGPT, Claude, Trae, Cursor, Copilot ou qualquer ferramenta futura. O controle permanece com o humano.</p>
+                </div>
+                <div class="card">
+                    <h3>🔒 Bloqueio Híbrido</h3>
+                    <p>Usa Git para persistência e LokiVector para detecção de conflitos semânticos em tempo real.</p>
+                </div>
+                <div class="card">
+                    <h3>📄 Padrão AGENTS.md</h3>
+                    <p>Implementa o padrão aberto para documentação legível por máquinas. Seus agentes saberão como se comportar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Vibecoding IPIVC Standard v2.0 (Human-Centric Edition)</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">Open Source License - MIT</p>
+        </div>
+    </footer>
+
+</body>
+</html>
