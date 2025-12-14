@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibecoding IPIVC Standard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Vibecoding IPIVC</h1>
+            <p class="tagline">El estándar de coordinación para equipos humanos asistidos por IA.</p>
+            <div class="cta-group">
+                <a href="https://github.com/tu-usuario/ipivc/releases/latest" class="btn">Descargar v1.1 ZIP</a>
+                <a href="#how-it-works" class="btn btn-secondary">Ver Cómo Funciona</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="problem">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">El Problema del "Enjambre Caótico"</h2>
+            <div class="grid">
+                <div class="card">
+                    <span class="card-icon">🌪️</span>
+                    <h3>Colisiones Invisibles</h3>
+                    <p>5 desarrolladores usando 5 IAs distintas (ChatGPT, Trae, Cursor) tocando los mismos archivos al mismo tiempo sin saberlo.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🧠</span>
+                    <h3>Amnesia de Contexto</h3>
+                    <p>Tu IA no sabe lo que la IA de tu compañero decidió hace 5 minutos. Resultado: Código incompatible y deuda técnica inmediata.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">💥</span>
+                    <h3>Infierno de Merges</h3>
+                    <p>Cuando todos hacen push de código generado automáticamente, resolver los conflictos se vuelve una tarea humana imposible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solution" style="background-color: white;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 2rem;">La Solución: IPIVC Protocol</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem auto;">
+                Un sistema ligero que vive dentro de tu repositorio Git y actúa como un semáforo de tráfico para tu equipo distribuido.
+            </p>
+
+            <div class="code-block">
+                <p style="color: #94a3b8; margin-bottom: 1rem;"># 1. Instala el estándar en tu proyecto existente</p>
+                <p>$ python install_standard.py</p>
+                <br>
+                <p style="color: #94a3b8; margin-bottom: 1rem;"># 2. Antes de codear, coordina con tu equipo</p>
+                <p>$ python tools/session_manager.py</p>
+                <p>> [1] Ver Estado del Equipo (Sync)</p>
+                <p>> [2] Bloquear Archivos (Lock)</p>
+            </div>
+
+            <div class="grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h3>Investiga (Sync)</h3>
+                        <p>Tu terminal se sincroniza automáticamente con el remoto para ver qué archivos están bloqueados por otros humanos.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h3>Planifica (Lock)</h3>
+                        <p>Reservas tu zona de trabajo. El sistema avisa instantáneamente al resto del equipo vía Git.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h3>Implementa (AI)</h3>
+                        <p>Alimentas a tu IA con <code>CURRENT_CONTEXT.prompt.md</code>, que contiene las reglas de seguridad y el estado del equipo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Características Clave</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>🤖 IA-Agnóstico</h3>
+                    <p>Funciona con ChatGPT, Claude, Trae, Cursor, Copilot o cualquier herramienta futura. El control está en el humano.</p>
+                </div>
+                <div class="card">
+                    <h3>🔒 Git-Based Locking</h3>
+                    <p>Sin servidores extra. Tu propio repositorio actúa como la base de datos de coordinación en tiempo real.</p>
+                </div>
+                <div class="card">
+                    <h3>📄 AGENTS.md Standard</h3>
+                    <p>Implementa el estándar abierto para documentación legible por máquinas. Tus agentes sabrán cómo comportarse.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Vibecoding IPIVC Standard v1.1 (Human-Centric Edition)</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">Open Source License - MIT</p>
+        </div>
+    </footer>
+
+</body>
+</html>

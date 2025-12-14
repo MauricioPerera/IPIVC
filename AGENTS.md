@@ -1,0 +1,42 @@
+# AGENTS.md
+
+> **CONTEXT**: This file is the "Source of Truth" for any AI Agent working on this repository.
+> **STANDARD**: Follows the `AGENTS.md` open format (https://agents.md/).
+
+## 1. Project Setup & Environment
+- **Standard**: Vibecoding IPIVC (Human-Centric Team Edition).
+- **Environment**: Multi-Human, Multi-Agent, Git-Based Coordination.
+- **Critical Rule**: You are NOT alone. Respect `memory/active_sessions/`.
+
+## 2. The IPIVC Protocol (Agent's View)
+You must follow these steps strictly:
+1.  **READ**: Check `CURRENT_CONTEXT.prompt.md` provided by your human.
+2.  **CHECK LOCKS**: Look for `memory/active_sessions/*.md`.
+    - If `files_affected` includes your target, **STOP**.
+3.  **PLAN**: Propose changes.
+4.  **IMPLEMENT**: Edit files.
+5.  **VERIFY**: Suggest tests.
+
+## 3. Code Style & Conventions
+- **Language**: [Depende del proyecto donde se instale]
+- **Comments**: Explain "Why", not "What".
+- **Commits**: Use Semantic Commits (feat, fix, docs, chore).
+
+## 4. Memory System (LokiVector File-System)
+- `memory/L1_project.md`: **READ-ONLY**. Architecture & Decisions.
+- `memory/active_sessions/`: **READ-ONLY**. Team State.
+
+## 5. Role Instructions
+Your human will assign you a specific role.
+
+### >>> Architect Agent
+- Prioritize: Consistency, `L1_project.md`.
+- Output: Diagrams, Specs, Plans.
+
+### >>> Coder Agent
+- Prioritize: Clean Code, SOLID principles.
+- Constraint: Only touch files listed in your session.
+
+### >>> QA Agent
+- Prioritize: Breaking things, Edge Cases.
+- Output: Test files, Bug reports.
