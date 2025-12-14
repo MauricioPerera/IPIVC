@@ -58,28 +58,32 @@
                 <p>$ python tools/session_manager.py</p>
                 <p>> [1] Ver Estado del Equipo (Sync)</p>
                 <p>> [2] Bloquear Archivos (Lock)</p>
+                <br>
+                <p style="color: #94a3b8; margin-bottom: 1rem;"># 3. Al terminar, verifica y libera</p>
+                <p>$ python tools/session_manager.py</p>
+                <p>> [3] Terminar Sesión (Unlock)</p>
             </div>
 
             <div class="grid">
                 <div class="step">
                     <div class="step-number">1</div>
                     <div>
-                        <h3>Investiga (Sync)</h3>
-                        <p>Tu terminal se sincroniza automáticamente con el remoto para ver qué archivos están bloqueados por otros humanos.</p>
+                        <h3>Investiga & Planifica</h3>
+                        <p>Sincronizas con el equipo y reservas tu zona de trabajo (Lock). El sistema avisa al resto vía Git.</p>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
                     <div>
-                        <h3>Planifica (Lock)</h3>
-                        <p>Reservas tu zona de trabajo. El sistema avisa instantáneamente al resto del equipo vía Git.</p>
+                        <h3>Implementa</h3>
+                        <p>Alimentas a tu IA con <code>CURRENT_CONTEXT.prompt.md</code>. La IA genera código respetando los límites.</p>
                     </div>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
                     <div>
-                        <h3>Implementa (AI)</h3>
-                        <p>Alimentas a tu IA con <code>CURRENT_CONTEXT.prompt.md</code>, que contiene las reglas de seguridad y el estado del equipo.</p>
+                        <h3>Verifica & Corrige</h3>
+                        <p>Tú revisas el código. Si pasa los tests, liberas el bloqueo (Unlock) y haces el push final.</p>
                     </div>
                 </div>
             </div>
