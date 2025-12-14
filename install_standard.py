@@ -17,8 +17,8 @@ def install_standard():
     print(f"\nInstalando en: {target_dir}...")
     
     # Definir qué copiar
-    folders_to_copy = ["tools", "memory", "ai_instructions"]
-    files_to_copy = ["TEAM_WORKFLOW.md", "security.spec.md"]
+    folders_to_copy = ["tools", "memory", "ai_instructions", "server"]
+    files_to_copy = ["TEAM_WORKFLOW.md", "security.spec.md", "AGENTS.md"]
     
     # Copiar carpetas
     for folder in folders_to_copy:
